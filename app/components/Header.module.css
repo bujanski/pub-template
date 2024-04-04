@@ -2,4 +2,8 @@
     display: flex;
     justify-content: center;
     font-family: var(--font-sans);
+    background-color: #330000;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
 }

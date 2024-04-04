@@ -1,13 +1,18 @@
 @font-face {
-    font-family: 'UPSSans';
-    src: url('../public/fonts/UPSBerlingskeSans-Rg.ttf');
+    font-family: "UPSSans";
+    src: url("../public/fonts/UPSBerlingskeSans-Rg.ttf");
 }
 
 @font-face {
-    font-family: 'UPSSerif';
-    src: url('../public/fonts/UPSBerlingskeSerifTx-Rg.ttf');
+    font-family: "UPSSerif";
+    src: url("../public/fonts/UPSBerlingskeSerifTx-Rg.ttf");
 }
 :root {
-    --font-serif: 'UPSSerif';
-    --font-sans: 'UPSSans'
+    --font-serif: "UPSSerif";
+    --font-sans: "UPSSans";
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
 }

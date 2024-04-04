@@ -1,0 +1,31 @@
+#container {
+    font-family: var(--font-sans);
+    display: flex;
+}
+
+#left_rail {
+    border: 1px solid gray;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:white;
+}
+
+#username {
+    font-size: 1.2em;
+    padding: 6px;
+    font-weight: 700;
+}
+
+#new_job_button {
+    border: 1px solid gray;
+    background-color: white;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 6px;
+    width: 70%;
+    cursor: pointer;
+}
+
+
