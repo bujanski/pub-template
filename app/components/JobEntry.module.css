@@ -1,0 +1,20 @@
+#container {
+    display: flex;
+    border-top: 1px solid rgb(231, 228, 228);
+}
+.job_title {
+    padding: 4px;
+    font-weight: 600;
+    width: 40%;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis;
+    min-width: 180px;
+}
+.job_author {
+    padding: 4px;
+    width: 15%;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis;
+}
