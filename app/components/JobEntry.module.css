@@ -1,9 +1,9 @@
 #container {
     display: flex;
-    border-top: 1px solid rgb(231, 228, 228);
+    border-top: 1px solid rgb(228, 228, 228);
 }
 .job_title {
-    padding: 4px;
+    padding: 4px 4px 4px 8px;
     font-weight: 600;
     width: 40%;
     white-space: nowrap; /* Prevent text wrapping */
@@ -12,9 +12,13 @@
     min-width: 180px;
 }
 .job_author {
-    padding: 4px;
+    padding: 4px 4px 4px 8px;
     width: 15%;
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide overflowing text */
     text-overflow: ellipsis;
+}
+.job_date {
+    padding: 4px 4px 4px 8px;
+    text-align: end;
 }

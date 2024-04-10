@@ -1,28 +1,52 @@
-// import styles from "./JobListing.module.css";
-import JobEntry from "./JobEntry";
-async function getData () {
-    try {
-        const res = await fetch("https://660f4b63356b87a55c511eec.mockapi.io/jobs");
-        const jobs = await res.json();
-        console.log(res);
-        return jobs;
-    } catch (error) {
-        console.error("Error fetching jobs:", error);
-        return []; // Return an empty array in case of error
-    }
-};
+"use client";
 
-export default async function JobList() {
-    const  jobs = await getData ();
+import styles from "./JobList.module.css";
+import { useState, useEffect } from "react";
+import JobEntry from "./JobEntry";
+
+// async function getData() {
+//     try {
+//         const res = await fetch(
+//             "https://660f4b63356b87a55c511eec.mockapi.io/jobs"
+//         );
+//         const jobs = await res.json();
+//         return jobs;
+//     } catch (error) {
+//         console.error("Error fetching jobs:", error);
+//         return []; // Return an empty array in case of error
+//     }
+// }
+
+export default function JobList() {
+    const [data, setData] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch("https://660f4b63356b87a55c511eec.mockapi.io/jobs")
+            .then((res) => res.json())
+            .then((data) => {
+                setData(data);
+                setLoading(false);
+            });
+    }, []);
+
+    if (isLoading) return <p>Loading...</p>;
+    if (!data) return <p>No job data</p>;
+
     return (
-        <div>
-            {jobs && jobs.length > 0 ? (
-                jobs.map((job) => (
-                    <JobEntry job={job} key={job.id}/>
-                ))
-            ) : (
-                <div>No jobs available</div>
-            )}
+        <div id={styles.container}>
+            <div id={styles.column_labels}>
+                <div id={styles.title_label}>Title</div>
+                <div id={styles.author_label}>Author</div>
+                <div id={styles.date_label}>Creation date</div>
+            </div>
+            <div>
+                {data && data.length > 0 ? (
+                    data.map((job) => <JobEntry job={job} key={job.id} />)
+                ) : (
+                    <div>No jobs available</div>
+                )}
+            </div>
         </div>
     );
 }

@@ -9,7 +9,7 @@ export default function JobSearchWidget() {
     <div id={styles.container}>
       <input
         type="text"
-        placeholder="Search for jobs..."
+        placeholder="Search for jobs by title or author..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />

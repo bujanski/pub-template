@@ -1,0 +1,48 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    font-family: var(--font-sans);
+}
+#job_number {
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+    margin-top: 6px;
+}
+#title_editor {
+    margin: 30px 0px 15px 0px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+
+.editor_label {
+    margin-right: 8px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.editor_input {
+    line-height: 1.5em;
+    flex-grow: 1; /* Take all available horizontal space */
+}
+
+#teaser_editor {
+    margin: 15px 0px 35px 0px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.quill {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.upload_container {
+    margin: 20px;
+}
+.image_label {
+    margin-top: 12px;
+    font-size: 1.25em;
+}
