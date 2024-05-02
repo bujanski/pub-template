@@ -4,18 +4,6 @@ import styles from "./JobList.module.css";
 import { useState, useEffect } from "react";
 import JobEntry from "./JobEntry";
 
-// async function getData() {
-//     try {
-//         const res = await fetch(
-//             "https://660f4b63356b87a55c511eec.mockapi.io/jobs"
-//         );
-//         const jobs = await res.json();
-//         return jobs;
-//     } catch (error) {
-//         console.error("Error fetching jobs:", error);
-//         return []; // Return an empty array in case of error
-//     }
-// }
 
 export default function JobList() {
     const [data, setData] = useState(null);

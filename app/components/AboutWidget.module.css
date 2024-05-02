@@ -6,6 +6,9 @@
     margin: auto;
     font-family: var(--font-sans);
 }
+#container hr {
+    margin-bottom: 25px;
+}
 #job_number {
     display: flex;
     justify-content: flex-end;
@@ -17,7 +20,6 @@
     display: flex;
     align-items: center; /* Align items vertically */
 }
-
 
 .editor_label {
     margin-right: 8px;
@@ -31,18 +33,66 @@
 }
 
 #teaser_editor {
-    margin: 15px 0px 35px 0px;
+    margin: 15px 0px 45px 0px;
     display: flex;
     align-items: center; /* Align items vertically */
 }
 .quill {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
-.upload_container {
+.upload_section {
+    display: flex;
+    align-items: left;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.upload_subsection {
+    display: flex;
+    flex-direction: column;
     margin: 20px;
+    width: 40%;
 }
-.image_label {
-    margin-top: 12px;
-    font-size: 1.25em;
+.file_drop {
+    margin: 8px;
+}
+.upload_widget {
+    margin: 15px 0px 45px 0px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 120px;
+    z-index: 999;
+}
+
+/* Add this to your existing CSS file */
+.info {
+    position: relative;
+    margin-left: 12px;
+    padding: 4px;
+    border: 1px solid lightgray;
+    font-size: 0.6em;
+    border-radius: 20%;
+}
+
+.info:hover .tooltip {
+    display: block;
+}
+
+.tag_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    padding: 8px;
+}
+
+.sel_tag_text {
+    margin:10px;
+    width: 220px;
 }

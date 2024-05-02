@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from "./NewJobDialog.module.css";
 
 export default function NewJobDialog({ onClose }) {
+    const router = useRouter();
     const [title, setTitle] = useState('');
     const [selectedChannels, setSelectedChannels] = useState([]);
     
@@ -28,11 +30,16 @@ export default function NewJobDialog({ onClose }) {
             // For demonstration purposes, you can just log the details
             console.log("Creating new job with title:", title);
             console.log("Selected channels:", selectedChannels);
-            // Close the modal
-            onClose();
+            // Navigate to '/jobs/1'
+            router.push('/jobs/1');
         } else {
             alert("Please enter a title with 5 or more characters and select at least one channel.");
         }
+    };
+
+    // Function to handle cancel button click
+    const handleCancel = () => {
+        onClose();
     };
 
     return (
@@ -53,22 +60,22 @@ export default function NewJobDialog({ onClose }) {
                 <div>
                     <input 
                         type="checkbox" 
-                        id="AboutUPS" 
-                        value="AboutUPS" 
-                        checked={selectedChannels.includes('AboutUPS')} 
+                        id="AboutUS" 
+                        value="AboutUs" 
+                        checked={selectedChannels.includes('AboutUs')} 
                         onChange={handleChannelChange} 
                     />
-                    <label htmlFor="AboutUPS"> About UPS</label>
+                    <label htmlFor="AboutUS"> About Us</label>
                 </div>
                 <div>
                     <input 
                         type="checkbox" 
-                        id="UPSers.com" 
-                        value="UPSers.com" 
-                        checked={selectedChannels.includes('UPSers.com')} 
+                        id="XYZers.com" 
+                        value="XYZers.com" 
+                        checked={selectedChannels.includes('XYZers.com')} 
                         onChange={handleChannelChange} 
                     />
-                    <label htmlFor="UPSers.com"> UPSers.com</label>
+                    <label htmlFor="XYZers.com"> XYZers.com</label>
                 </div>
                 <div>
                     <input 
@@ -92,7 +99,7 @@ export default function NewJobDialog({ onClose }) {
                 </div>
                 </div>
                 <div className={styles.button_container}>
-                    <button onClick={handleCreateJob}>Cancel</button>
+                    <button onClick={handleCancel}>Cancel</button>
                     <button onClick={handleCreateJob}>Create New Job</button>
                 </div>
                 

@@ -8,7 +8,7 @@ export const appInitialData = {
     toolbarOptions: [
         ["bold", "italic", "underline", "strike"], // toggled buttons
         ["blockquote"],
-        ["link", "image", "video"],
+        ["link"],
         [{ align: [] }],
 
         [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
@@ -23,4 +23,32 @@ export const appInitialData = {
 
         ["clean"],
     ],
-}
+    aboutTags: [
+        "Brand identity",
+        "Community engagement",
+        "Financials",
+        "Health and wellness",
+        "Hiring",
+        "Inclusion and belonging",
+        "Reporting",
+        "Safety",
+        "Security",
+        "Sustainability",
+        "Talent acquisition",
+        "Technology",
+    ],
+    xyzersTags: [
+        "Brand identity",
+        "Community engagement",
+        "Financials",
+        "Health and wellness",
+        "Hiring",
+        "Inclusion and belonging",
+        "Reporting",
+        "Safety",
+        "Security",
+        "Sustainability",
+        "Talent acquisition",
+        "Technology",
+    ],
+};

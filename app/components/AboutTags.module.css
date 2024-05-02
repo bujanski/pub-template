@@ -1,0 +1,38 @@
+#container {
+    display: flex;
+    align-items: left;
+    width: 100%;
+    margin: 10px;
+}
+
+.dropdown {
+    margin: 14px;
+}
+.tags_label {
+    margin-right: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.sel_tags_container {
+    margin: 14px;
+    width: 100%;
+}
+.sel_tags_box {
+    border: 1px solid gray;
+    width: 100%;
+    display: flex;
+    min-height: 50px;
+}
+.sel_tag {
+    margin: 4px;
+    padding: 6px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    max-width: 40%;
+}
+
+.sel_tag button {
+    margin-right: 8px;
+}

@@ -23,7 +23,7 @@ export default function Login() {
 
     const forgotPassword = () => {
         alert("That's too bad. You should use a password manager.");
-    }
+    };
 
     return (
         <div id={styles.container}>
@@ -50,12 +50,12 @@ export default function Login() {
                     </div>
                 </div>
                 <Link href="/user/1">
-                <button id={styles.login_button}>
-                    Log in
-                </button>
+                    <button id={styles.login_button}>Log in</button>
                 </Link>
             </form>
-            <p onClick={forgotPassword}>forgot password</p>
+            <div className={styles.forgot} onClick={forgotPassword}>
+                forgot password
+            </div>
         </div>
     );
 }
