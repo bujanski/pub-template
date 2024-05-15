@@ -51,4 +51,24 @@ export const appInitialData = {
         "Talent acquisition",
         "Technology",
     ],
+    aboutLocations: [
+        "The first place",
+        "The second place",
+        "The third place",
+        "The fourth place",
+        "The fifth place",
+        "The sixth place",
+        "The seventh place",
+        "The eighth place",
+    ],
+    xyzersLocations: [
+        "The first place",
+        "The second place",
+        "The third place",
+        "The fourth place",
+        "The fifth place",
+        "The sixth place",
+        "The seventh place",
+        "The eighth place",
+    ]
 };
